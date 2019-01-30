@@ -30,6 +30,7 @@
 		756CECCF21FF5EB8008A1819 /* Runner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Runner.cpp; sourceTree = "<group>"; };
 		756CECD121FF5F30008A1819 /* Node umlet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Node umlet.png"; path = "../../../../../Desktop/Node umlet.png"; sourceTree = "<group>"; };
 		756CECD221FF6116008A1819 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		7572EC442201F8C500699603 /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				756CECD221FF6116008A1819 /* Node.hpp */,
+				7572EC442201F8C500699603 /* LinearNode.hpp */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		755CE77822049A3D007BC8AE /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 755CE77622049A3D007BC8AE /* Timer.cpp */; };
 		756CECCE21FF5DB8008A1819 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 756CECCC21FF5DB8008A1819 /* Controller.cpp */; };
 		756CECD021FF5EB8008A1819 /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 756CECCF21FF5EB8008A1819 /* Runner.cpp */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		755CE77622049A3D007BC8AE /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		755CE77722049A3D007BC8AE /* Timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
 		756CECBE21FF5C74008A1819 /* DataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructures; sourceTree = BUILT_PRODUCTS_DIR; };
 		756CECCC21FF5DB8008A1819 /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
 		756CECCD21FF5DB8008A1819 /* Controller.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Controller.hpp; sourceTree = "<group>"; };
@@ -45,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		755CE77522049A0E007BC8AE /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				755CE77622049A3D007BC8AE /* Timer.cpp */,
+				755CE77722049A3D007BC8AE /* Timer.hpp */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		756CECB521FF5C74008A1819 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +76,7 @@
 		756CECC021FF5C74008A1819 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
+				755CE77522049A0E007BC8AE /* Tools */,
 				756CECCB21FF5D1E008A1819 /* Resouces */,
 				756CECC821FF5CAC008A1819 /* Diagrams */,
 				756CECCA21FF5CD0008A1819 /* Controller */,
@@ -179,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755CE77822049A3D007BC8AE /* Timer.cpp in Sources */,
 				756CECD021FF5EB8008A1819 /* Runner.cpp in Sources */,
 				756CECCE21FF5DB8008A1819 /* Controller.cpp in Sources */,
 			);

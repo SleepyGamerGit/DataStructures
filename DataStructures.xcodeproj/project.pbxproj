@@ -39,6 +39,7 @@
 		75698684220C79BD0010E6E0 /* Music.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Music.cpp; path = ../../../../../Desktop/Music.cpp; sourceTree = "<group>"; };
 		75698686220C79C60010E6E0 /* Music.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Music.hpp; path = ../../../../../Desktop/Music.hpp; sourceTree = "<group>"; };
 		75698687220C85410010E6E0 /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
+		75698688220C942A0010E6E0 /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 		756CECBE21FF5C74008A1819 /* DataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructures; sourceTree = BUILT_PRODUCTS_DIR; };
 		756CECCC21FF5DB8008A1819 /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
 		756CECCD21FF5DB8008A1819 /* Controller.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Controller.hpp; sourceTree = "<group>"; };
@@ -160,6 +161,7 @@
 		7572EC45220205F600699603 /* Linear */ = {
 			isa = PBXGroup;
 			children = (
+				75698688220C942A0010E6E0 /* LinkedList.hpp */,
 				7572EC462202063900699603 /* Array.hpp */,
 				75698687220C85410010E6E0 /* List.hpp */,
 			);

@@ -26,22 +26,24 @@ public:
     LinkedList();
 
     virtual ~LinkedList;
-    int getSize() const;
-    LinearNode<Type> * getFront();
-    LinearNode<Type> * getEnd();
+    virtual int getSize() const;
+    virtual LinearNode<Type> * getFront();
+    virtual LinearNode<Type> * getEnd();
     
-    void add(Type item);
-    void addAtIndex(int index, Type item);
-    Type getFromIndex(int index);
-    Type remove(int index);
+    virtual void add(Type item);
+    virtual void addAtIndex(int index, Type item);
+    virtual Type getFromIndex(int index);
+    virtual Type remove(int index);
+bool contains (Tpye item);
 
+template <class Type>
 LinkedList<Type> :: LinkedList()
 {
     this->front = nullprt;
     this->end = nullprt;
     this->size =  0;
 }
-
+template <class Type>
 LinkedList<Type> :: ~LinkedList()
 {
     LinearNode<Type> * destroyStructure = front;
@@ -52,7 +54,7 @@ LinkedList<Type> :: ~LinkedList()
         destroyStructure = front;
     }
 }
-
+template <class Type>
 void LinkedList :: add(Type item)
 {
     linearNode<Type> * newData = new LinearNode<Type>(item);
@@ -69,6 +71,36 @@ void LinkedList :: add(Type item)
     this->ende = newData
     
     this->size += 1;
+}
+
+//templaye <class Type>
+//void LinkedList<Type> :: addAtIndex(int index, Type item)
+
+tempalte <class Type>
+Type LinkedList<Type> :: remove (int index)
+{
+    assert(index >= 0 && index < this->size);
+    
+    linearNode<Type>
+}
+
+template <class Type>
+bool LinkedList<Type> :: contains(Type thingToFind)
+{
+    bool exists = false;
+    
+    LinearNode<Type> * searchPointer = front;
+    
+    for (int index = 0; index < getSize(); index++)
+    {
+        if (searchPointer->getData() == thingToFind)
+        {
+            return true;
+        }
+        searchPointer = searchPointer->getNextNode();
+    }
+    
+    return exists;
 }
 
 #endif /* LinkedList_h */

@@ -48,6 +48,9 @@
 		756CECD221FF6116008A1819 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 		7572EC442201F8C500699603 /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 		7572EC462202063900699603 /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
+		75A74CAA2211D674008027FC /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
+		75A74CAB2211D6BE008027FC /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
+		75A74CAC2211D6EB008027FC /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CircularList.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,9 @@
 				75698688220C942A0010E6E0 /* LinkedList.hpp */,
 				7572EC462202063900699603 /* Array.hpp */,
 				75698687220C85410010E6E0 /* List.hpp */,
+				75A74CAA2211D674008027FC /* Stack.hpp */,
+				75A74CAB2211D6BE008027FC /* Queue.hpp */,
+				75A74CAC2211D6EB008027FC /* CircularList.hpp */,
 			);
 			path = Linear;
 			sourceTree = "<group>";

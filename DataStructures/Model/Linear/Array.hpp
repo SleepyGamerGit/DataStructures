@@ -18,7 +18,7 @@ template <class Type>
 class Array
 {
 private:
-    Type * internalArray
+    Type * internalArray;
     int size;
 public:
     Array<Type>(int size);
@@ -39,7 +39,7 @@ public:
 template <class Type>
 Array<Type> :: Array(int size)
 {
-    asser(size > 0);
+    assert(size > 0);
     this->size = size;
     
     internalArray = new Type[size];
@@ -69,16 +69,16 @@ Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
 {
     if (&toAssign != this)
     {
-        if (size != toAssigb.getSize())
+        if (size != toAssign.getSize())
         {
             delete [] internalArray;
             size = toAssign.getSize();
-            internalArray[index] = toAssign[index];
+            internalArray = new Type [size];
         }
         
-        for (int index = 0; index < size: index++)
+        for (int index = 0; index < size; index++)
         {
-            internalArray[index] = toAssign[index]
+            internalArray[index] = toAssign[index];
         }
     }
     return *this;
@@ -89,7 +89,7 @@ template <class Type>
 Type & Array<Type> :: operator [] (int index)
 {
     assert(index >= 0 && index < size);
-    return internalArray[index]
+    return internalArray[index];
 }
 
 template <class Type>
@@ -110,7 +110,7 @@ Type Array<Type> :: getFromIndex(int index)
 {
     asser(index >=0 && index < size);
     
-    type value = internalArray[index];
+    Type value = internalArray[index];
     
     return value;
 }

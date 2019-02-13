@@ -12,6 +12,7 @@
 		75698685220C79BD0010E6E0 /* Music.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75698684220C79BD0010E6E0 /* Music.cpp */; };
 		756CECCE21FF5DB8008A1819 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 756CECCC21FF5DB8008A1819 /* Controller.cpp */; };
 		756CECD021FF5EB8008A1819 /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 756CECCF21FF5EB8008A1819 /* Runner.cpp */; };
+		7577390B22147F6C00872E75 /* LinearTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7577390922147F6C00872E75 /* LinearTester.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,8 @@
 		756CECD221FF6116008A1819 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 		7572EC442201F8C500699603 /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 		7572EC462202063900699603 /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
+		7577390922147F6C00872E75 /* LinearTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinearTester.cpp; sourceTree = "<group>"; };
+		7577390A22147F6C00872E75 /* LinearTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearTester.hpp; sourceTree = "<group>"; };
 		75A74CAA2211D674008027FC /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
 		75A74CAB2211D6BE008027FC /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
 		75A74CAC2211D6EB008027FC /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CircularList.hpp; sourceTree = "<group>"; };
@@ -106,6 +109,7 @@
 		756CECC021FF5C74008A1819 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
+				7577390822147F4F00872E75 /* Testers */,
 				7568B9902209EA3E00ED62B0 /* Data */,
 				755CE77522049A0E007BC8AE /* Tools */,
 				756CECCB21FF5D1E008A1819 /* Resouces */,
@@ -174,6 +178,15 @@
 			path = Linear;
 			sourceTree = "<group>";
 		};
+		7577390822147F4F00872E75 /* Testers */ = {
+			isa = PBXGroup;
+			children = (
+				7577390922147F6C00872E75 /* LinearTester.cpp */,
+				7577390A22147F6C00872E75 /* LinearTester.hpp */,
+			);
+			path = Testers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -235,6 +248,7 @@
 				756CECD021FF5EB8008A1819 /* Runner.cpp in Sources */,
 				756CECCE21FF5DB8008A1819 /* Controller.cpp in Sources */,
 				7568B98F2209E8F200ED62B0 /* FileController.cpp in Sources */,
+				7577390B22147F6C00872E75 /* LinearTester.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

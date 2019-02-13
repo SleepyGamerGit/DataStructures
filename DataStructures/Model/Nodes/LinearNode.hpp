@@ -9,30 +9,33 @@
 #ifndef LinearNode_hpp
 #define LinearNode_hpp
 
+#include "Node.hpp"
 #include <assert.h>
 
 template <class Type>
 class LinearNode : public Node<Type>
 {
-private:
+protected:
     LinearNode<Type> * next;
 public:
     LinearNode();
     LinearNode(Type data);
     LinearNode(Type data, LinearNode<Type> * next);
-    LinearNode<Type> * getNext();
-    void setNext(linearNode<Type> * next);
+    LinearNode<Type> * getNextNode();
+    void setNextNode(LinearNode<Type> * next);
 };
 
 //Implemtation of templates
 template <class Type>
-LinearNode<Type> :: LinearNode() : Node()
-{}
+LinearNode<Type> :: LinearNode() : Node<Type>()
+{
+    this->next = nullptr;
+}
 
 template <class Type>
-LinearNode<Type :: LinearNode(Type data) : Node<Type>(data)
+LinearNode<Type> :: LinearNode(Type data) : Node<Type>(data)
 {
-    this->next = nullprt;
+    this->next = nullptr;
 }
 
 template <class Type>
@@ -42,15 +45,15 @@ LinearNode<Type> :: LinearNode(Type data, LinearNode<Type> * next) : Node<Type>(
 }
 
 template <class Type>
-LinearNode<Type> :: setNext(LinearNode<Type> * next)
+void LinearNode<Type> :: setNextNode(LinearNode<Type> * nextNodePointer )
 {
-    return this->next;
+    this->next = nextNodePointer;
 }
 
 template <class Type>
-void LinearNode<Type> :: setNext(LinearNode<Type> * next)
+LinearNode<Type> * LinearNode<Type> :: getNextNode()
 {
-    this->next = next;
+    return next;
 }
 
 #endif /* LinearNode_h */

@@ -14,7 +14,8 @@
 using namespace std;
 
 template <class Type>
-class LinkedList : public List<Type>
+class LinkedList : public list<Type>
+{
 
 protected:
 
@@ -25,7 +26,7 @@ public:
 
     LinkedList();
 
-    virtual ~LinkedList;
+    virtual ~LinkedList();
     virtual int getSize() const;
     virtual LinearNode<Type> * getFront();
     virtual LinearNode<Type> * getEnd();
@@ -34,13 +35,13 @@ public:
     virtual void addAtIndex(int index, Type item);
     virtual Type getFromIndex(int index);
     virtual Type remove(int index);
-bool contains (Tpye item);
-
+//bool contains (Type item);
+};
 template <class Type>
 LinkedList<Type> :: LinkedList()
 {
-    this->front = nullprt;
-    this->end = nullprt;
+    this->front = nullptr;
+    this->end = nullptr;
     this->size =  0;
 }
 template <class Type>
@@ -55,9 +56,9 @@ LinkedList<Type> :: ~LinkedList()
     }
 }
 template <class Type>
-void LinkedList :: add(Type item)
+void LinkedList<Type>:: add(Type item)
 {
-    linearNode<Type> * newData = new LinearNode<Type>(item);
+    LinearNode<Type> * newData = new LinearNode<Type>(item);
     
     if(this->size == 0)
     {
@@ -68,39 +69,85 @@ void LinkedList :: add(Type item)
         this->end->setNextNode(newData);
     }
     
-    this->ende = newData
+    this->ende = newData;
     
     this->size += 1;
 }
 
-//templaye <class Type>
-//void LinkedList<Type> :: addAtIndex(int index, Type item)
-
-tempalte <class Type>
-Type LinkedList<Type> :: remove (int index)
+template <class Type>
+void LinkedList<Type> :: addAtIndex(int index, Type item)
 {
-    assert(index >= 0 && index < this->size);
-    
-    linearNode<Type>
+    assert(index >= 0 && index <= this->size);
+    if(index == this->size)
+    {
+        add(item);
+    }
+    else
+    {
+        LinearNode<Type> * toBeAdded = new LinearNode<Type>(item);
+        if (index == 0)
+        {
+            toBeAdded->setNextNode(front);
+            front = toBeAdded;
+        }
+        else
+        {
+            LinearNode<Type> * previous = nullptr;
+            LinearNode<Type> * current = front;
+            for (int position = 0; position < index; position++)
+            {
+                previous = current;
+                current = current->getNextNode();
+            }
+            previous->setNextNode(toBeAdded);
+            toBeAdded->setNextNode(current);
+        }
+        this->size++;
+    }
 }
 
 template <class Type>
-bool LinkedList<Type> :: contains(Type thingToFind)
+Type LinkedList<Type> :: remove (int index)
 {
-    bool exists = false;
+    assert(index >= 0 && index < this->size);
+    Type data;
     
-    LinearNode<Type> * searchPointer = front;
+    LinearNode<Type> * current = front;
     
-    for (int index = 0; index < getSize(); index++)
+    for (int position = 0; position < index; position++)
     {
-        if (searchPointer->getData() == thingToFind)
-        {
-            return true;
-        }
-        searchPointer = searchPointer->getNextNode();
+        current = current->getNextNode();
     }
     
-    return exists;
+    data = current->getData();
+    
+    return data;
 }
+template <class Type>
+Type LinkedList<Type> :: remove(int index)
+{
+    assert(index >= 0 && index  < this->size);
+    
+    LinearNode<Type> * current
+}
+
+//template <class Type>
+//bool LinkedList<Type> :: contains(Type thingToFind)
+//{
+ //   bool exists = false;
+    
+ //   LinearNode<Type> * searchPointer = front;
+    
+  //  for (int index = 0; index < getSize(); index++)
+   // {
+    //    if (searchPointer->getData() == thingToFind)
+      //  {
+    //        return true;
+       // }
+       // searchPointer = searchPointer->getNextNode();
+  //  }
+    
+  //  return exists;
+//}
 
 #endif /* LinkedList_h */

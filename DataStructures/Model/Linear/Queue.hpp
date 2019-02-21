@@ -30,7 +30,7 @@ public:
     void addAtIndex(int index, Type data);
     Type getFromIndex(int iindex);
     Type remove(int index);
-}
+};
 
 template <class Type>
 Queue<Type> :: Queue() : LinkedList<Type>()
@@ -41,7 +41,7 @@ Queue<Type> :: Queue() : LinkedList<Type>()
 template <class Type>
 Queue<Type> :: ~Queue()
 {
-    for(LinearNode<Type> * removed = this->front; removed != nullprt; removed = this->front)
+    for(LinearNode<Type> * removed = this->front; removed != nullptr; removed = this->front)
     {
         this->front = removed->getNextNode();
         delete  removed;
@@ -55,18 +55,18 @@ void Queue<Type> ::enqueue(Type item)
     
     if(this->size == 0)
     {
-        this->front = added
+        this->front = added;
     }
     else
     {
         this->end->setNextNode(added);
     }
     
-    this->end = added
+    this->end = added;
     this->size++;
 }
 
-tempalte <class Type>
+template <class Type>
 void Queue<Type> :: addAtIndex(int index, Type item)
 {
     assert(index == this->size);
@@ -84,7 +84,7 @@ Type Queue<Type> :: dequeue()
 {
     assert(this->size > 0);
     
-    type returned = this->front->getData();
+    Type returned = this->front->getData();
     
     LinearNode<Type> * removed = this->front;
     this->front = removed->getNextNode();
@@ -103,7 +103,7 @@ Type Queue<Type> :: remove(int index)
     return dequeue();
 }
 
-tempalte <class Type>
+template <class Type>
 void Queue<Type> :: clear()
 {
     while(this->front != nullptr)
@@ -120,7 +120,7 @@ Type Queue<Type> :: peek()
 }
 
 template <class Type>
-Type Queue<Tpye :: getFromIndex(int index)
+Type Queue<Type> :: getFromIndex(int index)
 {
     assert(index == 0);
     return peek();

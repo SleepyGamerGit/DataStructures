@@ -36,7 +36,6 @@
 		7568B9922209EA4D00ED62B0 /* CrimeData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CrimeData.cpp; sourceTree = "<group>"; };
 		7568B9932209EA4E00ED62B0 /* music.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = music.csv; sourceTree = "<group>"; };
 		7568B9962209EA4E00ED62B0 /* CrimeData.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CrimeData.hpp; sourceTree = "<group>"; };
-		7568B9972209EA4E00ED62B0 /* crime.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = crime.csv; path = ../../../../../Desktop/crime.csv; sourceTree = "<group>"; };
 		75698684220C79BD0010E6E0 /* Music.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Music.cpp; path = ../../../../../Desktop/Music.cpp; sourceTree = "<group>"; };
 		75698686220C79C60010E6E0 /* Music.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Music.hpp; path = ../../../../../Desktop/Music.hpp; sourceTree = "<group>"; };
 		75698687220C85410010E6E0 /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		75A74CAA2211D674008027FC /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
 		75A74CAB2211D6BE008027FC /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
 		75A74CAC2211D6EB008027FC /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CircularList.hpp; sourceTree = "<group>"; };
+		75DF5A8C221EEFD2005AC43E /* DoubleNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DoubleNode.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				75698686220C79C60010E6E0 /* Music.hpp */,
-				7568B9972209EA4E00ED62B0 /* crime.csv */,
 				7568B9922209EA4D00ED62B0 /* CrimeData.cpp */,
 				7568B9962209EA4E00ED62B0 /* CrimeData.hpp */,
 				75698684220C79BD0010E6E0 /* Music.cpp */,
@@ -161,6 +160,7 @@
 			children = (
 				756CECD221FF6116008A1819 /* Node.hpp */,
 				7572EC442201F8C500699603 /* LinearNode.hpp */,
+				75DF5A8C221EEFD2005AC43E /* DoubleNode.hpp */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";

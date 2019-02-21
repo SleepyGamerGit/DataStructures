@@ -69,7 +69,7 @@ void LinkedList<Type>:: add(Type item)
         this->end->setNextNode(newData);
     }
     
-    this->ende = newData;
+    this->end = newData;
     
     this->size += 1;
 }
@@ -123,13 +123,13 @@ Type LinkedList<Type> :: remove (int index)
     
     return data;
 }
-template <class Type>
-Type LinkedList<Type> :: remove(int index)
-{
-    assert(index >= 0 && index  < this->size);
+//template <class Type>
+//Type LinkedList<Type> :: remove(int index)
+//{
+ //   assert(index >= 0 && index  < this->size);
     
-    LinearNode<Type> * current
-}
+ //   LinearNode<Type> * current
+//}
 
 //template <class Type>
 //bool LinkedList<Type> :: contains(Type thingToFind)

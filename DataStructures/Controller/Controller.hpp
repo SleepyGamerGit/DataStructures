@@ -10,7 +10,9 @@
 #define Controller_hpp
 
 #include <iostream>
+#include "../Model/Nodes/LinearNode.hpp"
 #include "../Model/Nodes/Node.hpp"
+#include "../Testers/LinearTester.hpp"
 
 using namespace std;
 
@@ -18,6 +20,7 @@ class Controller
 {
 private:
     void usingNodes();
+    void testLinear();
 public:
     void start();
 };

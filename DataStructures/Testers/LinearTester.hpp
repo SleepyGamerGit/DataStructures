@@ -24,6 +24,14 @@ class LinearTester
 {
 public:
     void testVsSTL();
+    void crimeTimerSTL();
+    void crimTimerOOP();
+    void musicSTL();
+    void musicOOP();
+    
+    void testListBasic();
+    void testListWithData();
+    
 };
 
 #endif /* LinearTester_hpp */

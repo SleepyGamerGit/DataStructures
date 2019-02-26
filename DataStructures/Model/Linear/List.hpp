@@ -19,11 +19,13 @@ protected:
 public:
     virtual void add(Type item) = 0;
     virtual void addAtIndex(int index, Type item) = 0;
-    virtual Type remoce(int index) = 0;
+    virtual Type remove(int index) = 0;
     virtual int getSize() const = 0;
+    
     virtual LinearNode<Type> * getFront() = 0;
     virtual LinearNode<Type> * getEnd() = 0;
+    
 };
 
 
-#endif /* List_h */
+#endif /* List_hpp */

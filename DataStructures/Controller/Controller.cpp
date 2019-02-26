@@ -28,5 +28,5 @@ void Controller :: usingNodes()
 void Controller :: testLinear()
 {
     LinearTester lookieHere;
-    lookieHere.testSTL();
+    lookieHere.testVsSTL();
 }

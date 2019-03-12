@@ -126,4 +126,4 @@ Type Queue<Type> :: getFromIndex(int index)
     return peek();
 }
 
-#endif /* Queue_h */
+#endif /* Queue_hpp */

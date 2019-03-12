@@ -110,4 +110,4 @@ Type Stack<Type> :: getFromIndex(int index)
     return peek();
 }
 
-#endif /* Stack_h */
+#endif /* Stack_hpp */

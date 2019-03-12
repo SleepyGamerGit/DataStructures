@@ -30,7 +30,7 @@ public:
 };
 
 template <class Type>
-DoubleNode<Type> :: DoubleNode() : Node<Type>(d)
+DoubleNode<Type> :: DoubleNode() : Node<Type>()
 {
     previous = nullptr;
     next = nullptr;

@@ -122,4 +122,4 @@ void Array<Type> :: setAtIndex(int pos, Type item)
     internalArray[pos] = item;
 }
 
-#endif /* Array_h */
+#endif /* Array_hpp */

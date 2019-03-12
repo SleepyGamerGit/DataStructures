@@ -48,4 +48,4 @@ void Node<Type> :: setData(Type data)
     this->data = data;
 }
 
-#endif /* node_h */
+#endif /* node_hpp */

@@ -56,4 +56,4 @@ LinearNode<Type> * LinearNode<Type> :: getNextNode()
     return next;
 }
 
-#endif /* LinearNode_h */
+#endif /* LinearNode_hpp */

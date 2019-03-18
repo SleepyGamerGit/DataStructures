@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		754AEE5B223FDAE600B1911F /* GraphTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 754AEE59223FDAE600B1911F /* GraphTester.cpp */; };
 		755CE77822049A3D007BC8AE /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 755CE77622049A3D007BC8AE /* Timer.cpp */; };
 		7568B98F2209E8F200ED62B0 /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7568B98D2209E8F200ED62B0 /* FileController.cpp */; };
 		756CECCE21FF5DB8008A1819 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 756CECCC21FF5DB8008A1819 /* Controller.cpp */; };
@@ -29,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		753F0636223030B500103F88 /* Graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Graph.hpp; sourceTree = "<group>"; };
+		754AEE59223FDAE600B1911F /* GraphTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphTester.cpp; sourceTree = "<group>"; };
+		754AEE5A223FDAE600B1911F /* GraphTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GraphTester.hpp; sourceTree = "<group>"; };
 		755CE77622049A3D007BC8AE /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		755CE77722049A3D007BC8AE /* Timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
 		7568B98D2209E8F200ED62B0 /* FileController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileController.cpp; sourceTree = "<group>"; };
@@ -193,6 +196,8 @@
 			children = (
 				7577390922147F6C00872E75 /* LinearTester.cpp */,
 				7577390A22147F6C00872E75 /* LinearTester.hpp */,
+				754AEE59223FDAE600B1911F /* GraphTester.cpp */,
+				754AEE5A223FDAE600B1911F /* GraphTester.hpp */,
 			);
 			path = Testers;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				75CDB41A2232CFE500EB9ECD /* Music.cpp in Sources */,
 				7568B98F2209E8F200ED62B0 /* FileController.cpp in Sources */,
 				7577390B22147F6C00872E75 /* LinearTester.cpp in Sources */,
+				754AEE5B223FDAE600B1911F /* GraphTester.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

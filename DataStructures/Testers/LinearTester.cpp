@@ -17,7 +17,7 @@ void LinearTester :: testVsSTL()
     crimeTimerSTL.stopTimer();
     
     crimeTimerOOP.startTimer();
-    LinkedList<CrimeData> moreCrimes = FileController :: readDataToList("/Users/mhil6834/Documents/c++/DataStructures/DataStructures/Data/crime.csv");
+    LinkedList<CrimeData> moreCrimes = FileController :: readCrimeDataToList("/Users/mhil6834/Documents/c++/DataStructures/DataStructures/Data/crime.csv");
     crimeTimerOOP.stopTimer();
     
     cout << "This is the STL read Time: " << endl;
@@ -25,7 +25,7 @@ void LinearTester :: testVsSTL()
     cout << "this is the OOP Node Rade time: " << endl;
     crimeTimerOOP.displayInformation();
     cout << "A difference of: " << crimeTimerOOP.getTimeMicroseconds() - crimeTimerSTL.getTimeMicroseconds() << " microseconds" << endl;
-    
+
     musicSTL.startTimer();
     vector<Music> tunez = FileController :: musicDataToVector("/Users/mhil6834/Documents/c++/DataStructures/DataStructures/Data/music.csv");
     musicSTL.stopTimer();
@@ -44,9 +44,21 @@ void LinearTester :: testVsSTL()
     crimeTimerSTL.resetTimer();
     musicOOP.resetTimer();
     musicSTL.resetTimer();
+    
+    int randomIndex = rand() % moreCrimes.getSize();
+    {
+    crimeTimerSTL.startTimer();
+    crimes[randomIndex];
+    crimeTimerSTL.stopTimer();
+    
+    crimeTimerOOP.startTimer();
+    moreCrimes.getFromIndex(randomIndex);
+    crimeTimerOOP.stopTimer();
+    
 }
 
-void LinearTester :: testListBasic()
-{
+
+//void LinearTester :: testListBasic()
+
     
 }

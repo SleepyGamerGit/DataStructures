@@ -37,7 +37,7 @@ DoubleNode<Type> :: DoubleNode() : Node<Type>()
 }
 
 template <class Type>
-DoubleNode<Type> :: DoubleNode(Tpye data) : Node<Type>(data)
+DoubleNode<Type> :: DoubleNode(Type data) : Node<Type>(data)
 {
     previous = nullptr;
     next = nullptr;

@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		754AEE5B223FDAE600B1911F /* GraphTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 754AEE59223FDAE600B1911F /* GraphTester.cpp */; };
+		754AEE5D223FF02F00B1911F /* Music.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75CDB4192232CFE400EB9ECD /* Music.cpp */; };
+		754AEE5E223FF03400B1911F /* CrimeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7568B9922209EA4D00ED62B0 /* CrimeData.cpp */; };
 		755CE77822049A3D007BC8AE /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 755CE77622049A3D007BC8AE /* Timer.cpp */; };
 		7568B98F2209E8F200ED62B0 /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7568B98D2209E8F200ED62B0 /* FileController.cpp */; };
 		756CECCE21FF5DB8008A1819 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 756CECCC21FF5DB8008A1819 /* Controller.cpp */; };
 		756CECD021FF5EB8008A1819 /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 756CECCF21FF5EB8008A1819 /* Runner.cpp */; };
 		7577390B22147F6C00872E75 /* LinearTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7577390922147F6C00872E75 /* LinearTester.cpp */; };
-		75CDB41A2232CFE500EB9ECD /* Music.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75CDB4192232CFE400EB9ECD /* Music.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +59,7 @@
 		75CDB4182232CFB200EB9ECD /* Music.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Music.hpp; sourceTree = "<group>"; };
 		75CDB4192232CFE400EB9ECD /* Music.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Music.cpp; sourceTree = "<group>"; };
 		75DF5A8C221EEFD2005AC43E /* DoubleNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DoubleNode.hpp; sourceTree = "<group>"; };
+		75F4A2F62260D8DC0008F197 /* BinaryTreeNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryTreeNode.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				756CECD221FF6116008A1819 /* Node.hpp */,
 				7572EC442201F8C500699603 /* LinearNode.hpp */,
 				75DF5A8C221EEFD2005AC43E /* DoubleNode.hpp */,
+				75F4A2F62260D8DC0008F197 /* BinaryTreeNode.hpp */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -258,10 +261,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				754AEE5E223FF03400B1911F /* CrimeData.cpp in Sources */,
 				755CE77822049A3D007BC8AE /* Timer.cpp in Sources */,
 				756CECD021FF5EB8008A1819 /* Runner.cpp in Sources */,
+				754AEE5D223FF02F00B1911F /* Music.cpp in Sources */,
 				756CECCE21FF5DB8008A1819 /* Controller.cpp in Sources */,
-				75CDB41A2232CFE500EB9ECD /* Music.cpp in Sources */,
 				7568B98F2209E8F200ED62B0 /* FileController.cpp in Sources */,
 				7577390B22147F6C00872E75 /* LinearTester.cpp in Sources */,
 				754AEE5B223FDAE600B1911F /* GraphTester.cpp in Sources */,

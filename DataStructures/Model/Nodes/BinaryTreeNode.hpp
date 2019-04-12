@@ -27,9 +27,60 @@ public:
     BinaryTreeNode<Type> * getLeftChild();
     BinaryTreeNode<Type> * getRightChild();
     
-    void setRootBinary(BinaryTreeNode<Type * next);
-    void setLeftChild(BinaryTreeNode<Type * next);
-    void setRightChild(BinaryTreeNode<Type * next);
+    void setRootBinary(BinaryTreeNode<Type> * next);
+    void setLeftChild(BinaryTreeNode<Type> * next);
+    void setRightChild(BinaryTreeNode<Type> * next);
 };
 
+template <class Type>
+BinaryTreeNode<Type> :: BinaryTreeNode() : Node<Type>()
+{
+    root = nullptr;
+    leftChild = nullptr;
+    rightChild = nullptr;
+}
+
+template <class Type>
+BinaryTreeNode<Type> :: BinaryTreeNode(Type data) : Node<Type>(data)
+{
+    root = nullptr;
+    leftChild = nullptr;
+    rightChild = nullptr;
+}
+
+template <class Type>
+BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRoot()
+{
+    return this->root;
+}
+
+template <class Type>
+BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRightChild()
+{
+    return this->right;
+}
+
+template <class Type>
+BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getLeftChild()
+{
+    return this->left;
+}
+
+template <class Type>
+void BinaryTreeNode<Type> :: setRootBinary(BinaryTreeNode<Type> * newRoot)
+{
+    root = newRoot;
+}
+
+template <class Type>
+void BinaryTreeNode<Type> :: setRightChild(BinaryTreeNode<Type> * right)
+{
+    this->right = right;
+}
+
+template <class Type>
+void BinaryTreeNode<Type> :: setLeftChild(BinaryTreeNode<Type> * left)
+{
+    this->left = left;
+}
 #endif /* BinaryTreeNode_hpp */

@@ -9,13 +9,13 @@
 #ifndef BinarySearchTree_hpp
 #define BinarySearchTree_hpp
 
-#include "tree.hpp"
+#include "Tree.hpp"
 #include <iostream>
 
-using namespace std:
+using namespace std;
 
 template <class Type>
-class BinarySearchTree : public tree<Type>
+class BinarySearchTree : public Tree<Type>
 {
 protected:
     int calculateSize(BinaryTreeNode<Type> * startNode);
@@ -42,7 +42,7 @@ public:
     void inOrderTraversal();
     void preOrderTraversal();
     void postOrderTraversal();
-    void demoTraversalSteps(BinaryTreeNode<Type>> * node);
+    void demoTraversalSteps(BinaryTreeNode<Type> * node);
     
     int getSize();
     int getHeight();
@@ -55,28 +55,28 @@ public:
     
     Type findMinimum();
     Type findMaximum();
-}
+};
 
 template <class Type>
-int BinarrySearchTree<Type> :: getHeight()
+int BinarySearchTree<Type> :: getHeight()
 {
     return -1;
 }
 
 template <class Type>
-int BinarrySearchTree<Type> :: getSize()
+int BinarySearchTree<Type> :: getSize()
 {
     return -1;
 }
 
 template <class Type>
-int BinarrySearchTree<Type> :: isComplete()
+bool BinarySearchTree<Type> :: isComplete()
 {
     return false;
 }
 
 template <class Type>
-int BinarrySearchTree<Type> :: getBalanced()
+bool BinarySearchTree<Type> :: isBalanced()
 {
     return false;
 }
@@ -84,7 +84,7 @@ int BinarrySearchTree<Type> :: getBalanced()
 template <class Type>
 void BinarySearchTree<Type> :: inOrderTraversal()
 {
-    
+    inOrrderTraversal(this->root);
 }
 
 template <class Type>
@@ -100,13 +100,7 @@ void BinarySearchTree<Type> :: postOrderTraversal()
 }
 
 template <class Type>
-void BinarySearchTree<Type> :: insert(Type item)
-{
-    
-}
-
-template <class Type>
-void BinarySearchTree<Type> :: contains(Type value)
+bool BinarySearchTree<Type> :: contains(Type value)
 {
     
 }
@@ -116,6 +110,62 @@ void BinarySearchTree<Type> :: remove(Type item)
 {
     
 }
+
+template <class Type>
+void BinarySearchTree<Type> :: insert(Type itemToInsert)
+{
+    BinaryTreeNode<Type> * insertMe = new BinaryTreeNode<Type>(itemToInsert);
+    BinaryTreeNode<Type> * previous = nullptr;
+    BinaryTreeNode<Type> * current = this->root;
+    
+    if(current == nullptr)
+    {
+        this->root = insertMe;
+    }
+    else
+    {
+        while(current != nullptr)
+        {
+            previous = current;
+            if(itemToInsert < current->getData())
+            {
+                current = current->getLeftChild();
+            }
+            else if(itemToInsert > current->getData())
+            {
+                current = current->getRightChild();
+            }
+            else
+            {
+                cerr << "Item exist already - Exiting insert" << endl;
+                delete insertMe;
+                return;
+            }
+        }
+        
+        if (previous->getData() > itemToInsert)
+        {
+            previous->setLeftChild(insertMe);
+        }
+        else
+        {
+            previous->setRightChild(insertMe);
+        }
+        insertMe->setRootNode(previous);
+    }
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * currentNode)
+{
+    if(currentNode != nullptr)
+    {
+        inOrderTraversal(currentNode->getLeftChild());
+        cout << currentNode->getData() << endl;
+        inOrderTraversal(currentNode->getRightChild());
+    }
+}
+
 
 
 #endif /* BinarySearchTree_hpp */

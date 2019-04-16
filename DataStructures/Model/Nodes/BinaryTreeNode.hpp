@@ -30,6 +30,7 @@ public:
     void setRootBinary(BinaryTreeNode<Type> * next);
     void setLeftChild(BinaryTreeNode<Type> * next);
     void setRightChild(BinaryTreeNode<Type> * next);
+
 };
 
 template <class Type>
@@ -46,7 +47,7 @@ BinaryTreeNode<Type> :: BinaryTreeNode(Type data) : Node<Type>(data)
     root = nullptr;
     leftChild = nullptr;
     rightChild = nullptr;
-}
+};
 
 template <class Type>
 BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRoot()
@@ -83,4 +84,6 @@ void BinaryTreeNode<Type> :: setLeftChild(BinaryTreeNode<Type> * left)
 {
     this->left = left;
 }
+
+
 #endif /* BinaryTreeNode_hpp */

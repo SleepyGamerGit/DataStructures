@@ -24,7 +24,7 @@ protected:
     bool isComplete(BinaryTreeNode<Type> * startNode, int index, int size);
     
     void inOrderTraversal(BinaryTreeNode<Type> * inStart);
-    void preorderTraversal(BinaryTreeNode<Type> * preStart);
+    void preOrderTraversal(BinaryTreeNode<Type> * preStart);
     void postOrderTraversal(BinaryTreeNode<Type> * postStart);
     
     void destroyTree(BinaryTreeNode<Type> * node);
@@ -84,19 +84,41 @@ bool BinarySearchTree<Type> :: isBalanced()
 template <class Type>
 void BinarySearchTree<Type> :: inOrderTraversal()
 {
-    inOrrderTraversal(this->root);
+    inOrderTraversal(this->root);
 }
 
 template <class Type>
 void BinarySearchTree<Type> :: preOrderTraversal()
 {
-    
+    preOrderTraversal(this->root);
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: preOrderTraversal(BinaryTreeNode<Type> * currentNode)
+{
+    if(currentNode != nullptr)
+    {
+        cout<< currentNode->getData() << endl;
+        preOrderTraversal(currentNode->getLeftChild());
+        preOrderTraversal(currentNode->getRightChild());
+    }
 }
 
 template <class Type>
 void BinarySearchTree<Type> :: postOrderTraversal()
 {
-    
+    postOrderTraversal(this->root);
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: postOrderTraversal(BinaryTreeNode<Type> * currentNode)
+{
+    if(currentNode != nullptr)
+    {
+        postOrderTraversal(currentNode->getLeftChild());
+        postOrderTraversal(currentNode->getRightChild());
+        cout << currentNode->getData() << endl;
+    }
 }
 
 template <class Type>

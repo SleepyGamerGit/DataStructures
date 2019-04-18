@@ -189,15 +189,67 @@ void BinarySearchTree<Type> :: postOrderTraversal(BinaryTreeNode<Type> * current
 }
 
 template <class Type>
-bool BinarySearchTree<Type> :: contains(Type value)
+bool BinarySearchTree<Type> :: contains(Type itemToFind)
 {
-    
+    BinaryTreeNode<Type> * current = this->root;
+    if(current == nullptr)
+    {
+        return false;
+    }
+    else
+    {
+        while(current != nullptr)
+        {
+            if(itemToFind == current->getData())
+            {
+                return true;
+            }
+            else if (itemToFind == current->getData())
+            {
+                current = current->getLeftNode();
+            }
+            else
+            {
+                current = current->getRightNode();
+            }
+        }
+        return false;
+    }
 }
 
 template <class Type>
-void BinarySearchTree<Type> :: remove(Type item)
+void BinarySearchTree<Type> :: remove(Type getRidOfMe)
 {
-    
+    if(this->root == nullptr)
+    {
+        cout << "empty tre so removal is not possiblee" << endl;
+    }
+    else
+    {
+        BinaryTreeNode<Type> * current = this->root;
+        BinaryTreeNode<Type> * previous = nullptr;
+        bool hasBeenFound= false;
+        
+        while(current != nullptr && !hasBeenFound)
+        {
+            if(current->getData() == getRidOfMe)
+            {
+                hasBeenFound = true;
+            }
+            else
+            {
+                previous = current;
+                if(getRidOfMe < current->GetData())
+                {
+                    current = current->getLeftNode();
+                }
+                else
+                {
+                    current = current->getRightNode();
+                }
+            }
+        }
+    }
 }
 
 template <class Type>

@@ -33,8 +33,7 @@ protected:
     BinaryTreeNode<Type> * getLeftMostChild(BinaryTreeNode<Type> * current);
     
     void removeNode(BinaryTreeNode<Type> * removeMe);
-    
-public:
+    public:
     BinarySearchTree();
     ~BinarySearchTree();
     
@@ -455,5 +454,24 @@ Type BinarySearchTree<Type> :: findMinimum()
     assert(this->root != nullptr);
     return getLeftMostChild(this->root)->getData();
 }
+
+template <class Type>
+BinarySearchTree<Type> :: ~BinarySearchTree()
+{
+    destroyTree(this->root);
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: destroyTree(BinaryTreeNode<Type> * node)
+{
+    if(node != nullptr)
+    {
+        destroyTree(node->getLeftNode());
+        destroyTree(node->getRightNode());
+        delete node;
+    }
+}
+
+
 
 #endif /* BinarySearchTree_hpp */

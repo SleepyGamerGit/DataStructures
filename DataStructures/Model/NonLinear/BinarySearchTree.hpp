@@ -206,11 +206,11 @@ bool BinarySearchTree<Type> :: contains(Type itemToFind)
             }
             else if (itemToFind == current->getData())
             {
-                current = current->getLeftNode();
+                current = current->getLeftChild();
             }
             else
             {
-                current = current->getRightNode();
+                current = current->getRightChild();
             }
         }
         return false;
@@ -241,11 +241,11 @@ void BinarySearchTree<Type> :: remove(Type getRidOfMe)
                 previous = current;
                 if(getRidOfMe < current->GetData())
                 {
-                    current = current->getLeftNode();
+                    current = current->getLeftChild();
                 }
                 else
                 {
-                    current = current->getRightNode();
+                    current = current->getRightChild();
                 }
             }
         }
@@ -261,11 +261,11 @@ void BinarySearchTree<Type> :: remove(Type getRidOfMe)
             }
             else if(getRidOfMe < previous->getData())
             {
-                removeNode(previous->getLeftNode());
+                removeNode(previous->getLeftChild());
             }
             else
             {
-                removeNode(previous->getRightNode());
+                removeNode(previous->getRightChild());
             }
         }
     }
@@ -335,7 +335,7 @@ void BinarySearchTree<Type> :: removeNode(BinaryTreeNode<Type> * removeMe)
     
     previous = removeMe->getRootNode();
     
-    if(removeMe->getRightNode() == nullptr && removeMe->getLEftNode() == nullptr)
+    if(removeMe->getRightChild() == nullptr && removeMe->getLeftChild() == nullptr)
     {
         temp = removeMe;
         removeMe = nullptr;
@@ -352,10 +352,10 @@ void BinarySearchTree<Type> :: removeNode(BinaryTreeNode<Type> * removeMe)
         delete temp;
     }
     
-    else if(removeMe->getRightNode() == nullptr)
+    else if(removeMe->getRightChild() == nullptr)
     {
         temp = removeMe;
-        removeMe = removeMe->getLeftNode();
+        removeMe = removeMe->getLeftChild();
         
         if(previous != nullptr && temp->getData() < previous->getData())
         {
@@ -371,10 +371,10 @@ void BinarySearchTree<Type> :: removeNode(BinaryTreeNode<Type> * removeMe)
         delete temp;
     }
     
-    else if(removeMe->getLeftNode() == nullptr)
+    else if(removeMe->getLeftChild() == nullptr)
     {
         temp = removeMe;
-        removeMe = removeMe->getRightNode();
+        removeMe = removeMe->getRightChild();
         if(previous != nullptr && removeMe->getData() < previous->getData())
         {
             previous->setLeftNode(removeMe);
@@ -388,22 +388,22 @@ void BinarySearchTree<Type> :: removeNode(BinaryTreeNode<Type> * removeMe)
     }
     else
     {
-        current = getRightMostChild(removeMe->getLeftNode());
+        current = getRightMostChild(removeMe->getLeftChild());
         
         previous = current->getRootNode();
         removeMe->setData(current->getData());
         
         if(previous == nullptr)
         {
-            removeMe->setLeftNode(current->getLeftNode());
+            removeMe->setLeftNode(current->getLeftChild());
         }
         else
         {
-            previous->setRightNode(current->getLeftNode());
+            previous->setRightNode(current->getLeftChild());
         }
-        if(current->getLeftNode() != nullptr)
+        if(current->getLeftChild() != nullptr)
         {
-            current->getLeftNode()->setRootNode(removeMe);
+            current->getLeftChild()->setRootNode(removeMe);
         }
         delete current;
     }
@@ -421,7 +421,7 @@ BinaryTreeNode<Type> * BinarySearchTree<Type> :: getLeftMostChild(BinaryTreeNode
     while (currentNode != nullptr)
     {
         previous = currentNode;
-        currentNode = currentNode->getLeftNode();
+        currentNode = currentNode->getLeftChild();
     }
     
     return previous;
@@ -435,7 +435,7 @@ BinaryTreeNode<Type> * BinarySearchTree<Type> :: getRightMostChild(BinaryTreeNod
     while (currentNode != nullptr)
     {
         previous = currentNode;
-        currentNode = currentNode->getRightNode();
+        currentNode = currentNode->getRightChild();
     }
     
     return previous;
@@ -466,8 +466,8 @@ void BinarySearchTree<Type> :: destroyTree(BinaryTreeNode<Type> * node)
 {
     if(node != nullptr)
     {
-        destroyTree(node->getLeftNode());
-        destroyTree(node->getRightNode());
+        destroyTree(node->getLeftChild());
+        destroyTree(node->getRightChild());
         delete node;
     }
 }

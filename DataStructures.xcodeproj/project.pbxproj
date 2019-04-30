@@ -31,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		753213C722788B5D0003BF99 /* AVLTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AVLTree.hpp; sourceTree = "<group>"; };
 		753F0636223030B500103F88 /* Graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Graph.hpp; sourceTree = "<group>"; };
 		754AEE59223FDAE600B1911F /* GraphTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphTester.cpp; sourceTree = "<group>"; };
 		754AEE5A223FDAE600B1911F /* GraphTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GraphTester.hpp; sourceTree = "<group>"; };
@@ -84,6 +85,7 @@
 				75F4A2FA2260E2B40008F197 /* Tree.hpp */,
 				753F0636223030B500103F88 /* Graph.hpp */,
 				75F4A2FC2260E5F80008F197 /* BinarySearchTree.hpp */,
+				753213C722788B5D0003BF99 /* AVLTree.hpp */,
 			);
 			path = NonLinear;
 			sourceTree = "<group>";
